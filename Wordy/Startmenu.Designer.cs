@@ -65,8 +65,9 @@
             button2.TabIndex = 2;
             button2.Text = "Quit";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // Form1
+            // Startmenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -76,7 +77,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "Startmenu";
             Text = "Form1";
             ResumeLayout(false);
         }

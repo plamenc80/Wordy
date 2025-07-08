@@ -14,5 +14,12 @@ namespace Wordy
             Game game = new Game();
             game.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+          Quit quit = new Quit();
+            quit.Show();
+        }
     }
 }
