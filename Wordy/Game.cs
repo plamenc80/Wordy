@@ -15,7 +15,7 @@ namespace Wordy
         private List<string> words = new List<string>
         {
             "BUTTON", "PYTHON", "MARKET", "GUITAR", "SCHOOL",
-            "PLANET", "VISUAL", "STUDIO",
+            "PLANET"
         };
 
         private string currentWord;
@@ -139,6 +139,7 @@ namespace Wordy
         private void button1_Click(object sender, EventArgs e)
         {
             var word = textBox1.Text + textBox2.Text + textBox3.Text + textBox4.Text + textBox5.Text + textBox6.Text;
+            word = word.ToUpper();
             if (words.Contains(word))
             {
                 Victory victory = new Victory();
@@ -186,11 +187,12 @@ namespace Wordy
             TextBox current = sender as TextBox;
             if (current.Text.Length == 1)
             {
-                textBox6.Focus();
+                textBox4.Focus();
             }
         }
+        
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
             TextBox current = sender as TextBox;
             if (current.Text.Length == 1)
@@ -199,7 +201,7 @@ namespace Wordy
             }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
             TextBox current = sender as TextBox;
             if (current.Text.Length == 1)
@@ -213,7 +215,7 @@ namespace Wordy
             TextBox current = sender as TextBox;
             if (current.Text.Length == 1)
             {
-                textBox4.Focus();
+                textBox6.Focus();
             }
         }
     }
