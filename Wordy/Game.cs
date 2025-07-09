@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics.Eventing.Reader;
+using static System.Windows.Forms.DataFormats;
 
 namespace Wordy
 {
@@ -136,9 +137,18 @@ namespace Wordy
             SetupGame();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void  button1_Click(object sender, EventArgs e)
         {
             var word = textBox1.Text + textBox2.Text + textBox3.Text + textBox4.Text + textBox5.Text + textBox6.Text;
+            {
+                if (incorrectGuesses >= 6)
+                {
+                    MessageBox.Show($"Game over! The word was: {currentWord}");
+                    Loser newForm = new Loser();
+                    newForm.Show();
+                    this.Hide();
+                }
+            }
             word = word.ToUpper();
             if (words.Contains(word))
             {
